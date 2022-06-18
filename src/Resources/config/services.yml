@@ -1,6 +1,6 @@
 services:
-    welp_ical.factory:
-        class: Welp\IcalBundle\Factory\Factory
+    jorgelive_ical.factory:
+        class: jorgelive\IcalBundle\Factory\Factory
         calls:
-            - [ setTimezone, ['%welp_ical.default_timezone%']]
-            - [ setProdid, ['%welp_ical.default_prodid%']]
+            - [ setTimezone, ['%jorgelive_ical.default_timezone%']]
+            - [ setProdid, ['%jorgelive_ical.default_prodid%']]

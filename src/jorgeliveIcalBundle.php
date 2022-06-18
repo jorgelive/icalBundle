@@ -1,12 +1,12 @@
 <?php
 
-namespace Welp\IcalBundle;
+namespace jorgelive\IcalBundle;
 
-use Welp\IcalBundle\DependencyInjection\WelpIcalExtension;
+use jorgelive\IcalBundle\DependencyInjection\jorgeliveIcalExtension;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class WelpIcalBundle extends Bundle
+class jorgeliveIcalBundle extends Bundle
 {
     /**
      * Get container extension
@@ -16,7 +16,7 @@ class WelpIcalBundle extends Bundle
     public function getContainerExtension()
     {
         if (!$this->extension instanceof ExtensionInterface) {
-            $this->extension = new WelpIcalExtension();
+            $this->extension = new jorgeliveIcalExtension();
         }
 
         return $this->extension;

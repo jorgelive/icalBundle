@@ -1,14 +1,14 @@
 <?php
 
-namespace Welp\IcalBundle\Tests;
+namespace jorgelive\IcalBundle\Tests;
 
-use Welp\IcalBundle\Component\Calendar;
+use jorgelive\IcalBundle\Component\Calendar;
 
 /**
  * Abstract calendar test case
  *
- * @package Welp\IcalBundle\Tests
- * @author  Titouan BENOIT <titouan@welp.today>
+ * @package jorgelive\IcalBundle\Tests
+ * @author  jorge GOMEZ <gomez.valencia@outlook.com>
  */
 abstract class CalendarTestCase extends \PHPUnit_Framework_TestCase
 {
@@ -20,7 +20,7 @@ abstract class CalendarTestCase extends \PHPUnit_Framework_TestCase
      */
     protected function assertCalendar($calendar)
     {
-        $this->assertInstanceOf('Welp\IcalBundle\Component\Calendar', $calendar);
+        $this->assertInstanceOf('jorgelive\IcalBundle\Component\Calendar', $calendar);
         $this->assertInstanceOf('Jsvrcek\ICS\Model\Calendar', $calendar);
     }
 }

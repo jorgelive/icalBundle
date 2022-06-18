@@ -1,8 +1,8 @@
 <?php
 
-namespace Welp\IcalBundle\Response;
+namespace jorgelive\IcalBundle\Response;
 
-use Welp\IcalBundle\Component\Calendar;
+use jorgelive\IcalBundle\Component\Calendar;
 use Symfony\Component\HttpFoundation\Response;
 
 use Jsvrcek\ICS\Utility\Formatter;
@@ -12,8 +12,8 @@ use Jsvrcek\ICS\CalendarExport;
 /**
  * Represents a HTTP response for a calendar file download
  *
- * @package Welp\IcalBundle\Response
- * @author  Titouan BENOIT <titouan@welp.today>
+ * @package jorgelive\IcalBundle\Response
+ * @author  jorge GOMEZ <gomez.valencia@outlook.com>
  */
 class CalendarResponse extends Response
 {

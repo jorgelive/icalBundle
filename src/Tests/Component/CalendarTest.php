@@ -1,14 +1,14 @@
 <?php
-namespace Welp\IcalBundle\Tests\Component;
+namespace jorgelive\IcalBundle\Tests\Component;
 
-use Welp\IcalBundle\Component\Calendar;
-use Welp\IcalBundle\Tests\CalendarTestCase;
+use jorgelive\IcalBundle\Component\Calendar;
+use jorgelive\IcalBundle\Tests\CalendarTestCase;
 
 /**
  * Tests for calendar component
  *
- * @package Welp\IcalBundle\Tests
- * @author  Titouan BENOIT <titouan@welp.today>
+ * @package jorgelive\IcalBundle\Tests
+ * @author  jorge GOMEZ <gomez.valencia@outlook.com>
  */
 class CalendarTest extends CalendarTestCase
 {

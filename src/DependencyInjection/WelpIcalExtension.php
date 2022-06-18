@@ -1,6 +1,6 @@
 <?php
 
-namespace Welp\IcalBundle\DependencyInjection;
+namespace jorgelive\IcalBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class WelpIcalExtension extends Extension
+class jorgeliveIcalExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -22,8 +22,8 @@ class WelpIcalExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('welp_ical.default_timezone', $config['default_timezone']);
-        $container->setParameter('welp_ical.default_prodid', $config['default_prodid']);
+        $container->setParameter('jorgelive_ical.default_timezone', $config['default_timezone']);
+        $container->setParameter('jorgelive_ical.default_prodid', $config['default_prodid']);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
@@ -37,6 +37,6 @@ class WelpIcalExtension extends Extension
      */
     public function getAlias()
     {
-        return 'welp_ical';
+        return 'jorgelive_ical';
     }
 }

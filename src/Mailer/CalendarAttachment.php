@@ -1,8 +1,8 @@
 <?php
 
-namespace Welp\IcalBundle\Mailer;
+namespace jorgelive\IcalBundle\Mailer;
 
-use Welp\IcalBundle\Component\Calendar;
+use jorgelive\IcalBundle\Component\Calendar;
 
 use Jsvrcek\ICS\Utility\Formatter;
 use Jsvrcek\ICS\CalendarStream;
@@ -11,8 +11,8 @@ use Jsvrcek\ICS\CalendarExport;
 /**
  * Calendar attachment for Swift mailer messages
  *
- * @package Welp\IcalBundle\Mailer
- * @author  Titouan BENOIT <titouan@welp.today>
+ * @package jorgelive\IcalBundle\Mailer
+ * @author  jorge GOMEZ <gomez.valencia@outlook.com>
  */
 class CalendarAttachment extends \Swift_Attachment
 {

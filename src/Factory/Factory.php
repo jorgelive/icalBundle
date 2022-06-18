@@ -1,8 +1,8 @@
 <?php
 
-namespace Welp\IcalBundle\Factory;
+namespace jorgelive\IcalBundle\Factory;
 
-use Welp\IcalBundle\Component\Calendar;
+use jorgelive\IcalBundle\Component\Calendar;
 
 use Jsvrcek\ICS\Model\CalendarEvent;
 use Jsvrcek\ICS\Model\CalendarAlarm;
@@ -23,8 +23,8 @@ use Jsvrcek\ICS\CalendarExport;
 /**
  * Calendar Factory
  *
- * @package Welp\IcalBundle\Factory
- * @author  Titouan BENOIT <titouan@welp.today>
+ * @package jorgelive\IcalBundle\Factory
+ * @author  jorge GOMEZ <gomez.valencia@outlook.com>
  */
 class Factory
 {

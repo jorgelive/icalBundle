@@ -1,9 +1,9 @@
 # icalBundle
 
-[![Build Status](https://travis-ci.org/welpdev/icalBundle.svg?branch=master)](https://travis-ci.org/welpdev/icalBundle)
-[![Packagist](https://img.shields.io/packagist/v/welp/ical-bundle.svg)](https://packagist.org/packages/welp/ical-bundle)
-[![Packagist](https://img.shields.io/packagist/dt/welp/ical-bundle.svg)](https://packagist.org/packages/welp/ical-bundle)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/welpdev/icalBundle/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/jorgelivedev/icalBundle.svg?branch=master)](https://travis-ci.org/jorgelivedev/icalBundle)
+[![Packagist](https://img.shields.io/packagist/v/jorgelive/ical-bundle.svg)](https://packagist.org/packages/jorgelive/ical-bundle)
+[![Packagist](https://img.shields.io/packagist/dt/jorgelive/ical-bundle.svg)](https://packagist.org/packages/jorgelive/ical-bundle)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jorgelivedev/icalBundle/blob/master/LICENSE)
 
 Symfony Bundle to manage .ics iCal file (creating and eventually reading)
 
@@ -14,15 +14,15 @@ use of the library: <https://github.com/jasvrcek/ICS>
 Add bundle to your project:
 
 ```bash
-composer require welp/ical-bundle
+composer require jorgelive/ical-bundle
 ```
 
-Add `Welp\IcalBundle\WelpIcalBundle` to your `AppKernel.php`:
+Add `jorgelive\IcalBundle\jorgeliveIcalBundle` to your `AppKernel.php`:
 
 ```php
 $bundles = [
     // ...
-    new Welp\IcalBundle\WelpIcalBundle(),
+    new jorgelive\IcalBundle\jorgeliveIcalBundle(),
 ];
 ```
 
@@ -31,9 +31,9 @@ $bundles = [
 In your `config.yml`:
 
 ```yaml
-welp_ical:
+jorgelive_ical:
     default_timezone: "Europe/Paris"
-    default_prodid: "-//WelpIcalBundle//Calendar App//FR"
+    default_prodid: "-//jorgeliveIcalBundle//Calendar App//FR"
 ```
 
 ## Usage
@@ -44,12 +44,12 @@ welp_ical:
     ...
 
     /**
-     * Generate calendar event ICAL for welpAction
+     * Generate calendar event ICAL for jorgeliveAction
      * @Config\Route("/ical", name="app_ical")
      */
     public function icalAction()
     {
-        $icalFactory = $this->get('welp_ical.factory');
+        $icalFactory = $this->get('jorgelive_ical.factory');
 
         //Create a calendar
         $calendar = $icalFactory->createCalendar();
@@ -68,8 +68,8 @@ welp_ical:
 
         //set the Organizer
         $organizer = $icalFactory->createOrganizer();
-        $organizer->setValue('titouan@welp.fr')
-            ->setName('Titouan BENOIT')
+        $organizer->setValue('titouan@jorgelive.fr')
+            ->setName('jorge GOMEZ')
             ->setLanguage('fr');
         $eventOne->setOrganizer($organizer);
 
@@ -84,7 +84,7 @@ welp_ical:
             ->addEvent($eventTwo);
 
         $headers = array();
-        $calendarResponse = new Welp\IcalBundle\Response\CalendarResponse($calendar, 200, $headers);
+        $calendarResponse = new jorgelive\IcalBundle\Response\CalendarResponse($calendar, 200, $headers);
 
         return $calendarResponse;
 

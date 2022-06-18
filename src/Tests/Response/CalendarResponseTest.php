@@ -1,16 +1,16 @@
 <?php
 
-namespace Welp\IcalBundle\Tests\Response;
+namespace jorgelive\IcalBundle\Tests\Response;
 
-use Welp\IcalBundle\Component\Calendar;
-use Welp\IcalBundle\Response\CalendarResponse;
-use Welp\IcalBundle\Tests\CalendarTestCase;
+use jorgelive\IcalBundle\Component\Calendar;
+use jorgelive\IcalBundle\Response\CalendarResponse;
+use jorgelive\IcalBundle\Tests\CalendarTestCase;
 
 /**
  * Tests for CalendarResponse
  *
- * @package Welp\IcalBundle\Tests\Response
- * @author  Titouan BENOIT <titouan@welp.today>
+ * @package jorgelive\IcalBundle\Tests\Response
+ * @author  jorge GOMEZ <gomez.valencia@outlook.com>
  */
 class CalendarResponseTest extends CalendarTestCase
 {
@@ -24,7 +24,7 @@ class CalendarResponseTest extends CalendarTestCase
         $response = new CalendarResponse($calendar, 200);
 
         $this->assertInstanceOf('Symfony\Component\HttpFoundation\Response', $response);
-        $this->assertInstanceOf('Welp\IcalBundle\Response\CalendarResponse', $response);
+        $this->assertInstanceOf('jorgelive\IcalBundle\Response\CalendarResponse', $response);
         $this->assertEquals(200, $response->getStatusCode());
 
         $this->assertEquals($calendar->export(), $response->getContent());

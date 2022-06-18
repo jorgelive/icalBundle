@@ -1,9 +1,9 @@
 {
-    "name": "welp/ical-bundle",
+    "name": "jorgelive/ical-bundle",
     "description": "Symfony Bundle to manage .ics iCal file (creating and eventually reading)",
     "version": "1.0.2",
     "type": "symfony-bundle",
-    "homepage": "https://github.com/welpdev/icalBundle",
+    "homepage": "https://github.com/jorgelive/icalBundle",
     "license": "MIT",
     "keywords": [
         "Symfony",
@@ -11,17 +11,17 @@
         "ics",
         "calendar",
         "icalendar",
-        "welp"
+        "jorgelive"
     ],
     "authors": [
         {
-            "name": "Titouan BENOIT",
-            "email": "titouan@welp.today"
+            "name": "jorge GOMEZ",
+            "email": "gomez.valencia@outlook.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Welp\\IcalBundle\\": "src/"
+            "jorgelive\\IcalBundle\\": "src/"
         }
     },
     "require": {

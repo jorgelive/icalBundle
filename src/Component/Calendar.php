@@ -1,6 +1,6 @@
 <?php
 
-namespace Welp\IcalBundle\Component;
+namespace jorgelive\IcalBundle\Component;
 
 use Jsvrcek\ICS\Model\Calendar as vCalendar;
 
@@ -11,8 +11,8 @@ use Jsvrcek\ICS\CalendarExport;
 /**
  * Calendar component
  *
- * @package Welp\IcalBundle\Component
- * @author  Titouan BENOIT <titouan@welp.today>
+ * @package jorgelive\IcalBundle\Component
+ * @author  jorge GOMEZ <gomez.valencia@outlook.com>
  */
 class Calendar extends vCalendar
 {

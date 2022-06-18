@@ -1,6 +1,6 @@
 <?php
 
-namespace Welp\IcalBundle\DependencyInjection;
+namespace jorgelive\IcalBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -17,7 +17,7 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('welp_ical');
+        $treeBuilder = new TreeBuilder('jorgelive_ical');
         if (\method_exists($treeBuilder, 'getRootNode')) {
             $rootNode = $treeBuilder->getRootNode();
         } else {
@@ -30,7 +30,7 @@ class Configuration implements ConfigurationInterface
         // more information on that topic.
 
         $rootNode->children()
-            ->scalarNode('default_prodid')->defaultValue('-//WelpIcalBundle//Calendar App//FR')->end()
+            ->scalarNode('default_prodid')->defaultValue('-//jorgeliveIcalBundle//Calendar App//FR')->end()
             ->scalarNode('default_timezone')->defaultNull()->end();
 
         return $treeBuilder;

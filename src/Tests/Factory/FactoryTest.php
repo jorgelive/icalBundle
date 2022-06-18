@@ -1,16 +1,16 @@
 <?php
 
-namespace Welp\IcalBundle\Tests\Factory;
+namespace jorgelive\IcalBundle\Tests\Factory;
 
-use Welp\IcalBundle\Component\Calendar;
-use Welp\IcalBundle\Factory\Factory;
-use Welp\IcalBundle\Tests\CalendarTestCase;
+use jorgelive\IcalBundle\Component\Calendar;
+use jorgelive\IcalBundle\Factory\Factory;
+use jorgelive\IcalBundle\Tests\CalendarTestCase;
 
 /**
  * Tests for calendar factory
  *
- * @package Welp\IcalBundle\Tests
- * @author  Titouan BENOIT <titouan@welp.today>
+ * @package jorgelive\IcalBundle\Tests
+ * @author  jorge GOMEZ <gomez.valencia@outlook.com>
  */
 class FactoryTest extends CalendarTestCase
 {
@@ -35,7 +35,7 @@ class FactoryTest extends CalendarTestCase
      */
     public function testInit()
     {
-        $this->assertInstanceOf('Welp\IcalBundle\Factory\Factory', $this->factory);
+        $this->assertInstanceOf('jorgelive\IcalBundle\Factory\Factory', $this->factory);
     }
 
 
