@@ -17,7 +17,7 @@ class jorgeliveIcalExtension extends Extension
     /**
      * {@inheritdoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
@@ -35,7 +35,7 @@ class jorgeliveIcalExtension extends Extension
      *
      * @return string
      */
-    public function getAlias()
+    public function getAlias(): string
     {
         return 'jorgelive_ical';
     }
